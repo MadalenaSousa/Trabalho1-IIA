@@ -17,7 +17,6 @@ public class BlockDetectorScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         initialTransformUp = this.transform.up;
         initialTransformFwd = this.transform.forward;
     }
@@ -38,7 +37,9 @@ public class BlockDetectorScript : MonoBehaviour
             strength = 0;
             angleToClosestObj = 0;
         }
+
         //FIM DO CÓDIGO NOVO
+
 
     }
 
@@ -66,11 +67,12 @@ public class BlockDetectorScript : MonoBehaviour
         throw new NotImplementedException();
     }
 
-    // YOUR CODE HERE
-    public List<ObjectInfo> GetVisibleObjects(string objectTag)
+
+    public List<ObjectInfo> GetVisibleObstacles(string objectTag)
     {
         RaycastHit hit;
-        List<ObjectInfo> objectsInformation = new List<ObjectInfo>();
+        List<ObjectInfo> objectsInformation = new List<ObjectInfo>(); //lista de objetos
+
 
         for (int i = 0; i * angleOfSensors <= 360f; i++)
         {
@@ -96,17 +98,18 @@ public class BlockDetectorScript : MonoBehaviour
 
     public ObjectInfo[] GetVisibleWalls()
     {
-        return (ObjectInfo[])GetVisibleObjects("Wall").ToArray();
+
+        return (ObjectInfo[])GetVisibleObstacles("Wall").ToArray();
     }
 
     public ObjectInfo GetClosestWall()
     {
-        ObjectInfo[] a = (ObjectInfo[])GetVisibleObjects("Wall").ToArray();
+
+        ObjectInfo[] a = (ObjectInfo[])GetVisibleObstacles("Wall").ToArray();
         if (a.Length == 0)
         {
             return null;
         }
         return a[a.Length - 1];
     }
-    //FIM DO CÓDIGO NOVO
 }
