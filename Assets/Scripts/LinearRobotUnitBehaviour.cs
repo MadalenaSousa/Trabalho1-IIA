@@ -10,9 +10,6 @@ public class LinearRobotUnitBehaviour : RobotUnit
     public float blockValue;
     public float blockAngle;
 
-    public float blockValue;
-    public float blockAngle;
-
     void Update()
     {
         // get sensor data
