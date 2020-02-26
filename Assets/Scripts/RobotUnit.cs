@@ -6,8 +6,6 @@ using UnityEngine.UI;
 
 public class RobotUnit : MonoBehaviour
 {
-   
-
     public int resourcesGathered;
     protected Rigidbody rb;
     public float speed = 1.0f;

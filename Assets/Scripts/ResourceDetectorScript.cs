@@ -69,7 +69,7 @@ public class ResourceDetectorScript : MonoBehaviour
     public List<ObjectInfo> GetVisibleObjects(string objectTag)
     {
         RaycastHit hit;
-        List<ObjectInfo> objectsInformation = new List<ObjectInfo>();
+        List<ObjectInfo> objectsInformation = new List<ObjectInfo>(); //lista de objetos
 
         for (int i = 0; i * angleOfSensors <= 360f; i++)
         {
@@ -93,12 +93,12 @@ public class ResourceDetectorScript : MonoBehaviour
         return objectsInformation;
     }
 
-    public ObjectInfo[] GetVisiblePickups()
+    public ObjectInfo[] GetVisiblePickups() //retorna array de objetos pickup visiveis
     {
         return (ObjectInfo[]) GetVisibleObjects("Pickup").ToArray();
     }
 
-    public ObjectInfo GetClosestPickup()
+    public ObjectInfo GetClosestPickup() //retorna objeto pickup visivel mais proximo
     {
         ObjectInfo [] a = (ObjectInfo[])GetVisibleObjects("Pickup").ToArray();
         if(a.Length == 0)
