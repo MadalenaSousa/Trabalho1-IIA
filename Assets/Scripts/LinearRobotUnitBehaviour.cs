@@ -25,7 +25,7 @@ public class LinearRobotUnitBehaviour : RobotUnit
 
         // apply to the ball
         applyForce(resourceAngle, resourceValue); // go towards
-        applyForce(blockAngle, -blockValue);
+        applyForce(blockAngle, -blockValue); // afasta-se
 
     }
 
