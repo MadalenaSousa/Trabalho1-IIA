@@ -38,6 +38,8 @@ public class BlockDetectorScript : MonoBehaviour
             angleToClosestObj = 0;
         }
 
+        //FIM DO CÓDIGO NOVO
+
 
     }
 
@@ -54,19 +56,23 @@ public class BlockDetectorScript : MonoBehaviour
     public virtual float GetGaussianOutput()
     {
         // YOUR CODE HERE
+
         throw new NotImplementedException();
     }
 
     public virtual float GetLogaritmicOutput()
     {
         // YOUR CODE HERE
+
         throw new NotImplementedException();
     }
+
 
     public List<ObjectInfo> GetVisibleObstacles(string objectTag)
     {
         RaycastHit hit;
         List<ObjectInfo> objectsInformation = new List<ObjectInfo>(); //lista de objetos
+
 
         for (int i = 0; i * angleOfSensors <= 360f; i++)
         {
@@ -92,11 +98,13 @@ public class BlockDetectorScript : MonoBehaviour
 
     public ObjectInfo[] GetVisibleWalls()
     {
+
         return (ObjectInfo[])GetVisibleObstacles("Wall").ToArray();
     }
 
     public ObjectInfo GetClosestWall()
     {
+
         ObjectInfo[] a = (ObjectInfo[])GetVisibleObstacles("Wall").ToArray();
         if (a.Length == 0)
         {
