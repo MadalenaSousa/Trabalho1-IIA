@@ -15,7 +15,7 @@ public class ObjectInfo : IEquatable<ObjectInfo>, IComparable<ObjectInfo>
         throw new NotImplementedException();
     }
 
-    public int CompareTo(ObjectInfo other)
+    public int CompareTo(ObjectInfo other) //Qual o objeto mais distante
     {
         if (this.distance < other.distance)
         {
