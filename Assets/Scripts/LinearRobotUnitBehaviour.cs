@@ -12,7 +12,6 @@ public class LinearRobotUnitBehaviour : RobotUnit
 
     void Update()
     {
-
         // get sensor data
         resourceAngle = resourcesDetector.GetAngleToClosestResource();
         resourceValue = weightResource * resourcesDetector.GetLinearOuput();
@@ -26,10 +25,7 @@ public class LinearRobotUnitBehaviour : RobotUnit
         applyForce(resourceAngle, resourceValue); // go towards
         applyForce(blockAngle, blockValue);
 
-        
-
     }
-
 
 }
 
