@@ -98,13 +98,11 @@ public class BlockDetectorScript : MonoBehaviour
 
     public ObjectInfo[] GetVisibleWalls()
     {
-
         return (ObjectInfo[])GetVisibleObstacles("Wall").ToArray();
     }
 
     public ObjectInfo GetClosestWall()
     {
-
         ObjectInfo[] a = (ObjectInfo[])GetVisibleObstacles("Wall").ToArray();
         if (a.Length == 0)
         {
