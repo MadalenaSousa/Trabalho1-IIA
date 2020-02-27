@@ -83,7 +83,7 @@ public class BlockDetectorScript : MonoBehaviour
                 {
                     if (debugMode)
                     {
-                        Debug.DrawRay(this.transform.position, Quaternion.AngleAxis((-angleOfSensors * i), initialTransformUp) * initialTransformFwd * hit.distance, Color.red);
+                        Debug.DrawRay(this.transform.position, Quaternion.AngleAxis((-angleOfSensors * i), initialTransformUp) * initialTransformFwd * hit.distance, Color.blue);
                     }
                     ObjectInfo info = new ObjectInfo(hit.distance, angleOfSensors * i + 90);
                     objectsInformation.Add(info);
@@ -98,13 +98,11 @@ public class BlockDetectorScript : MonoBehaviour
 
     public ObjectInfo[] GetVisibleWalls()
     {
-
         return (ObjectInfo[])GetVisibleObstacles("Wall").ToArray();
     }
 
     public ObjectInfo GetClosestWall()
     {
-
         ObjectInfo[] a = (ObjectInfo[])GetVisibleObstacles("Wall").ToArray();
         if (a.Length == 0)
         {

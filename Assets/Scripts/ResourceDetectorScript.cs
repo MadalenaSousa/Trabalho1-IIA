@@ -25,12 +25,12 @@ public class ResourceDetectorScript : MonoBehaviour
     // FixedUpdate is called at fixed intervals of time
     void FixedUpdate()
     {
-        ObjectInfo pickup;
-        pickup = GetClosestPickup();
-        if (pickup != null)
+        ObjectInfo pickup; //crio objeto pickup, que vai ter um angulo e uma distancia
+        pickup = GetClosestPickup(); //esse objeto vai ser o pickup mais proximo
+        if (pickup != null) //se existe
         {
-            angle = pickup.angle;
-            strength = 1.0f / (pickup.distance + 1.0f);
+            angle = pickup.angle; //guardo o angulo
+            strength = 1.0f / (pickup.distance + 1.0f); //formula tá no enunciado do projeto, formula da energia
         }
         else
         { // no object detected
