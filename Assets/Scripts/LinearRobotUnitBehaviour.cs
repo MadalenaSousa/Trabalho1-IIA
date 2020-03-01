@@ -5,7 +5,7 @@ using UnityEngine;
 public class LinearRobotUnitBehaviour : RobotUnit
 {
     public float weightResource;
-    public float weightBlock;
+    public float weightBlock; //valor negativo <-> D3I afasta-se do obstáculo
     public float resourceValue;
     public float resourceAngle;
     public float blockValue;
@@ -14,12 +14,10 @@ public class LinearRobotUnitBehaviour : RobotUnit
     void Update()
     {
         // get sensor data
-
         resourceAngle = resourcesDetector.GetAngleToClosestResource();
         resourceValue = weightResource * resourcesDetector.GetLinearOuput();
 
         blockAngle = blockDetector.GetAngleToClosestObstacle();
-        //valor negativo --> D3I afasta-se do obstáculo
         blockValue = weightBlock * blockDetector.GetLinearOuput();
 
         print(blockAngle);
