@@ -24,12 +24,11 @@ public class BlockDetectorScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        // YOUR CODE HERE
+
         ObjectInfo wall;
-        //GetClosestWall() -> devolve o objeto vísivel mais próximo com a tag "wall"
         wall = GetClosestWall();
-        //se detectar alguma wall
-        if (wall != null)
+        
+        if (wall != null) //se detectar alguma wall
         {
             angleToClosestObj = wall.angle;
             strength = 1.0f / (wall.distance + 1.0f);
@@ -40,12 +39,9 @@ public class BlockDetectorScript : MonoBehaviour
             angleToClosestObj = 0;
         }
 
-        //FIM DO CÓDIGO NOVO
-
-
     }
-    //obtém o ângulo ao bloco mais próximo
-    public float GetAngleToClosestObstacle()
+
+    public float GetAngleToClosestObstacle()  //obtém o ângulo ao bloco mais próximo
     {
         return angleToClosestObj;
     }
@@ -69,13 +65,12 @@ public class BlockDetectorScript : MonoBehaviour
         throw new NotImplementedException();
     }
 
-    //retorna os objetos visíveis
-    public List<ObjectInfo> GetVisibleObstacles(string objectTag)
+
+    public List<ObjectInfo> GetVisibleObstacles(string objectTag) //retorna os objetos visíveis
     {
         RaycastHit hit;
         List<ObjectInfo> objectsInformation = new List<ObjectInfo>(); //lista de objetos
 
-        //INÍCIO NOVO CÓDIGO
         for (int i = 0; i * angleOfSensors <= 360f; i++)
         {
             if (Physics.Raycast(this.transform.position, Quaternion.AngleAxis(-angleOfSensors * i, initialTransformUp) * initialTransformFwd, out hit, rangeOfSensors))
@@ -97,14 +92,14 @@ public class BlockDetectorScript : MonoBehaviour
 
         return objectsInformation;
     }
-    //retorna os objetos visíveis com a tag “wall”
-    public ObjectInfo[] GetVisibleWalls()
+
+    public ObjectInfo[] GetVisibleWalls() //retorna os objetos visíveis com a tag “wall”
     {
         return (ObjectInfo[])GetVisibleObstacles("Wall").ToArray();
     }
 
-    //retorna o objeto visível com a tag “wall” mais próximo
-    public ObjectInfo GetClosestWall()
+
+    public ObjectInfo GetClosestWall() //retorna o objeto visível com a tag “wall” mais próximo
     {
         ObjectInfo[] a = (ObjectInfo[])GetVisibleObstacles("Wall").ToArray();
         if (a.Length == 0)
@@ -113,5 +108,4 @@ public class BlockDetectorScript : MonoBehaviour
         }
         return a[a.Length - 1];
     }
-    //FIM NOVO CÓDIGO
 }
