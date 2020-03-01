@@ -30,7 +30,7 @@ public class ResourceDetectorScript : MonoBehaviour
         if (pickup != null) //se existe
         {
             angle = pickup.angle; //guardo o angulo
-            strength = 1.0f / (pickup.distance + 1.0f); //formula tá no enunciado do projeto, formula da energia
+            strength = 1.0f / (pickup.distance + 1.0f); //formula está no enunciado do projeto, formula da energia
         }
         else
         { // no object detected
@@ -65,7 +65,7 @@ public class ResourceDetectorScript : MonoBehaviour
     }
 
 
-
+    
     public List<ObjectInfo> GetVisibleObjects(string objectTag)
     {
         RaycastHit hit;
