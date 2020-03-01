@@ -19,6 +19,7 @@ public class LinearRobotUnitBehaviour : RobotUnit
         resourceValue = weightResource * resourcesDetector.GetLinearOuput();
 
         blockAngle = blockDetector.GetAngleToClosestObstacle();
+        //valor negativo --> D3I afasta-se do obstáculo
         blockValue = weightBlock * blockDetector.GetLinearOuput();
 
         print(blockAngle);
