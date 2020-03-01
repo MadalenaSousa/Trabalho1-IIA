@@ -26,6 +26,7 @@ public class BlockDetectorScript : MonoBehaviour
     {
         // YOUR CODE HERE
         ObjectInfo wall;
+        //GetClosestWall() - devolve o objeto vísivel mais próximo com a tag "wall"
         wall = GetClosestWall();
         if (wall != null)
         {
@@ -73,7 +74,7 @@ public class BlockDetectorScript : MonoBehaviour
         RaycastHit hit;
         List<ObjectInfo> objectsInformation = new List<ObjectInfo>(); //lista de objetos
 
-
+        //INÍCIO NOVO CÓDIGO
         for (int i = 0; i * angleOfSensors <= 360f; i++)
         {
             if (Physics.Raycast(this.transform.position, Quaternion.AngleAxis(-angleOfSensors * i, initialTransformUp) * initialTransformFwd, out hit, rangeOfSensors))
@@ -110,4 +111,5 @@ public class BlockDetectorScript : MonoBehaviour
         }
         return a[a.Length - 1];
     }
+    //FIM NOVO CÓDIGO
 }
