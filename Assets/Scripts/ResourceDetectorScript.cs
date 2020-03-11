@@ -26,7 +26,9 @@ public class ResourceDetectorScript : MonoBehaviour
     void FixedUpdate()
     {
         ObjectInfo pickup; //crio objeto pickup, que vai ter um angulo e uma distancia
+        
         pickup = GetClosestPickup(); //esse objeto vai ser o pickup mais proximo
+        
         if (pickup != null) //se existe
         {
             angle = pickup.angle; //guardo o angulo
@@ -47,7 +49,7 @@ public class ResourceDetectorScript : MonoBehaviour
 
 
 
-    public float GetLinearOuput()
+    public float GetLinearOutput()
     {
         return strength;
     }
@@ -57,14 +59,17 @@ public class ResourceDetectorScript : MonoBehaviour
         // YOUR CODE HERE
 
         strength = (1 / largura * Mathf.Sqrt(2 * Mathf.PI)) * Mathf.Exp(-(Mathf.Pow(strength - centro, 2) / (2 * Mathf.Pow(largura, 2))));
-        
-        return strength;
+
+        return (float)strength;
     }
 
-    public virtual float GetLogaritmicOutput()
+    public virtual float GetLogaritmicOutput(float logBase)
     {
         // YOUR CODE HERE
-        throw new NotImplementedException();
+
+        float logaritmicStrength = Mathf.Log(logBase, strength);
+
+        return logaritmicStrength;
     }
 
 
