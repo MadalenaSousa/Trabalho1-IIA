@@ -10,15 +10,17 @@ public class LinearRobotUnitBehaviour : RobotUnit
     public float resourceAngle;
     public float blockValue;
     public float blockAngle;
+    public float resource_minX, resource_maxX, resource_minY, resource_maxY;
+    public float block_minX, block_maxX, block_minY, block_maxY;
 
     void Update()
     {
         // get sensor data
         resourceAngle = resourcesDetector.GetAngleToClosestResource();
-        resourceValue = weightResource * resourcesDetector.GetLinearOuput();
+        resourceValue = weightResource * resourcesDetector.GetLinearOutput(resource_minX, resource_maxX, resource_minY, resource_maxY);
 
         blockAngle = blockDetector.GetAngleToClosestObstacle();
-        blockValue = weightBlock * blockDetector.GetLinearOuput();
+        blockValue = weightBlock * blockDetector.GetLinearOutput(block_minX, block_maxX, block_minY, block_maxY);
 
         print(blockAngle);
 

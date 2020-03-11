@@ -46,23 +46,29 @@ public class BlockDetectorScript : MonoBehaviour
         return angleToClosestObj;
     }
 
-    public float GetLinearOuput()
+    public float GetLinearOutput(float minX, float maxX, float minY, float maxY) //envia os limites
     {
+        //falta por os limites
+
         return strength;
     }
 
-    public virtual float GetGaussianOutput()
+    public virtual float GetGaussianOutput(float largura, float centro, float minX, float maxX, float minY, float maxY) //envia o centro do gráfico, a largura, que vai fazer variar a altura, do gráfico e os limites
     {
-        // YOUR CODE HERE
+        //falta por os limites
 
-        throw new NotImplementedException();
+        float gaussianStrength = (1 / largura * Mathf.Sqrt(2 * Mathf.PI)) * Mathf.Exp(-(Mathf.Pow(strength - centro, 2) / (2 * Mathf.Pow(largura, 2)))); //função gaussiana que "filtra" a strength com que vai contra as paredes
+
+        return gaussianStrength;
     }
 
-    public virtual float GetLogaritmicOutput()
+    public virtual float GetLogaritmicOutput(float logBase, float minX, float maxX, float minY, float maxY) //envia a base do logaritmo e os limites
     {
-        // YOUR CODE HERE
+        //falta por os limites
 
-        throw new NotImplementedException();
+        float logaritmicStrength = -Mathf.Log(strength, logBase); //função logaritmica que "filtra" a strength com que vai contra as paredes
+
+        return logaritmicStrength;
     }
 
 

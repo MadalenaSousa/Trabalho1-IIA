@@ -680,6 +680,11 @@ PrefabInstance:
       propertyPath: countText
       value: 
       objectReference: {fileID: 740066924}
+    - target: {fileID: 1022615238940490695, guid: b606527f8af28664a894844f3f526637,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4098859518129120615, guid: b606527f8af28664a894844f3f526637,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -740,7 +745,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: D31-r
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1022615238940490695, guid: b606527f8af28664a894844f3f526637, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b606527f8af28664a894844f3f526637, type: 3}
 --- !u!1 &1080066063 stripped
 GameObject:
@@ -748,6 +754,58 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1080066062}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1080066064 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5325365325777440094, guid: b606527f8af28664a894844f3f526637,
+    type: 3}
+  m_PrefabInstance: {fileID: 1080066062}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea0a6ac58e2ef4bb184d9c065cbf536b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1080066065 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7314612682239532039, guid: b606527f8af28664a894844f3f526637,
+    type: 3}
+  m_PrefabInstance: {fileID: 1080066062}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec3a16dc6bfeb4c468864d89ef9d7563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1080066066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080066063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 782724997f8338946babc05573a28c70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourcesGathered: 0
+  speed: 1
+  countText: {fileID: 740066924}
+  startTime: 0
+  timeElapsed: 0
+  resourcesDetector: {fileID: 1080066065}
+  blockDetector: {fileID: 1080066064}
+  debugMode: 1
+  weightResource: 0.1
+  resourceValue: 0
+  resourceAngle: 0
+  logBase: 10
+  minX: 0
+  maxX: 0
+  minY: 0
+  maxY: 0
 --- !u!1 &1120493373
 GameObject:
   m_ObjectHideFlags: 0
