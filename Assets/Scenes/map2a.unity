@@ -802,6 +802,10 @@ MonoBehaviour:
   resourceValue: 0
   resourceAngle: 0
   logBase: 10
+  minX: 0
+  maxX: 0
+  minY: 0
+  maxY: 0
 --- !u!1 &1120493373
 GameObject:
   m_ObjectHideFlags: 0

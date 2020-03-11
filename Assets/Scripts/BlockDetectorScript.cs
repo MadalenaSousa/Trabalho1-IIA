@@ -53,14 +53,14 @@ public class BlockDetectorScript : MonoBehaviour
 
     public virtual float GetGaussianOutput(float largura, float centro)
     {
-        float gaussianStrength = (1 / largura * Mathf.Sqrt(2 * Mathf.PI)) * Mathf.Exp(-(Mathf.Pow(strength - centro, 2) / (2 * Mathf.Pow(largura, 2))));
+        float gaussianStrength = (1 / largura * Mathf.Sqrt(2 * Mathf.PI)) * Mathf.Exp(-(Mathf.Pow(strength - centro, 2) / (2 * Mathf.Pow(largura, 2)))); //função gaussiana
 
         return gaussianStrength;
     }
 
     public virtual float GetLogaritmicOutput(float logBase)
     {
-        float logaritmicStrength = -Mathf.Log(strength, logBase);
+        float logaritmicStrength = -Mathf.Log(strength, logBase); //função logaritmica
 
         return logaritmicStrength;
     }
