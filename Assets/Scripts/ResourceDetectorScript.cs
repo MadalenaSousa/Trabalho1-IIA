@@ -56,18 +56,16 @@ public class ResourceDetectorScript : MonoBehaviour
 
     public virtual float GetGaussianOutput(float centro, float largura)
     {
-        // YOUR CODE HERE
 
-        strength = (1 / largura * Mathf.Sqrt(2 * Mathf.PI)) * Mathf.Exp(-(Mathf.Pow(strength - centro, 2) / (2 * Mathf.Pow(largura, 2))));
+        float gaussianStrength = (1 / largura * Mathf.Sqrt(2 * Mathf.PI)) * Mathf.Exp(-(Mathf.Pow(strength - centro, 2) / (2 * Mathf.Pow(largura, 2))));
 
-        return (float)strength;
+        return gaussianStrength;
     }
 
     public virtual float GetLogaritmicOutput(float logBase)
     {
-        // YOUR CODE HERE
 
-        float logaritmicStrength = Mathf.Log(logBase, strength);
+        float logaritmicStrength = - Mathf.Log(strength, logBase);
 
         return logaritmicStrength;
     }
