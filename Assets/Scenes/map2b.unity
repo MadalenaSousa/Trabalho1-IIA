@@ -810,8 +810,8 @@ MonoBehaviour:
   weightResource: 1
   resourceValue: 0
   resourceAngle: 0
-  largura: 0
-  centro: 0
+  largura: 0.12
+  centro: 0.5
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
