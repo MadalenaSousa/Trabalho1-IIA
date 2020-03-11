@@ -7,7 +7,9 @@ public class LogaritmicRobotUnitBehaviour : RobotUnit
     public float weightResource;
     public float resourceValue;
     public float resourceAngle;
-    public float logBase, minX, maxX, minY, maxY;
+    public float logBase;
+    public float resource_minX, resource_maxX, resource_minY, resource_maxY;
+    public float block_minX, block_maxX, block_minY, block_maxY;
 
     // Update is called once per frame
     void Update()
@@ -15,7 +17,7 @@ public class LogaritmicRobotUnitBehaviour : RobotUnit
 
         // get sensor data
         resourceAngle = resourcesDetector.GetAngleToClosestResource();
-        resourceValue = weightResource * resourcesDetector.GetLogaritmicOutput(logBase, minX, maxX, minY, maxY);
+        resourceValue = weightResource * resourcesDetector.GetLogaritmicOutput(logBase, resource_minX, resource_maxX, resource_minY, resource_maxY);
 
         // apply to the ball
         applyForce(resourceAngle, resourceValue); // go towards, slow first, then fast, then slow again

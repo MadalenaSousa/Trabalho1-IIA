@@ -49,13 +49,16 @@ public class ResourceDetectorScript : MonoBehaviour
 
 
 
-    public float GetLinearOutput()
+    public float GetLinearOutput(float minX, float maxX, float minY, float maxY)
     {
+        //falta por os limites
+
         return strength;
     }
 
     public virtual float GetGaussianOutput(float centro, float largura, float minX, float maxX, float minY, float maxY)
     {
+        //falta por os limites
 
         float gaussianStrength = (1 / largura * Mathf.Sqrt(2 * Mathf.PI)) * Mathf.Exp(-(Mathf.Pow(strength - centro, 2) / (2 * Mathf.Pow(largura, 2))));
 
@@ -64,6 +67,7 @@ public class ResourceDetectorScript : MonoBehaviour
 
     public virtual float GetLogaritmicOutput(float logBase, float minX, float maxX, float minY, float maxY)
     {
+        //falta por os limites
 
         float logaritmicStrength = - Mathf.Log(strength, logBase);
 

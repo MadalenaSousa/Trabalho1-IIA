@@ -7,7 +7,9 @@ public class GaussianRobotUnitBehaviour : RobotUnit
     public float weightResource;
     public float resourceValue;
     public float resourceAngle;
-    public float largura, centro, minX, maxX, minY, maxY;
+    public float largura, centro;
+    public float resource_minX, resource_maxX, resource_minY, resource_maxY;
+    public float block_minX, block_maxX, block_minY, block_maxY;
 
     // Update is called once per frame
     void Update()
@@ -15,7 +17,7 @@ public class GaussianRobotUnitBehaviour : RobotUnit
 
         // get sensor data
         resourceAngle = resourcesDetector.GetAngleToClosestResource();
-        resourceValue = weightResource * resourcesDetector.GetGaussianOutput(centro, largura, minX, maxX, minY, maxY);
+        resourceValue = weightResource * resourcesDetector.GetGaussianOutput(centro, largura, resource_minX, resource_maxX, resource_minY, resource_maxY);
 
         print(resourceValue);
 
