@@ -49,27 +49,27 @@ public class ResourceDetectorScript : MonoBehaviour
 
 
 
-    public float GetLinearOutput(float minX, float maxX, float minY, float maxY)
+    public float GetLinearOutput(float minX, float maxX, float minY, float maxY) //envia os limites
     {
         //falta por os limites
 
         return strength;
     }
 
-    public virtual float GetGaussianOutput(float centro, float largura, float minX, float maxX, float minY, float maxY)
+    public virtual float GetGaussianOutput(float centro, float largura, float minX, float maxX, float minY, float maxY) //envia o centro do gráfico, a largura, que vai fazer variar a altura, do gráfico e os limites
     {
         //falta por os limites
 
-        float gaussianStrength = (1 / largura * Mathf.Sqrt(2 * Mathf.PI)) * Mathf.Exp(-(Mathf.Pow(strength - centro, 2) / (2 * Mathf.Pow(largura, 2))));
+        float gaussianStrength = (1 / largura * Mathf.Sqrt(2 * Mathf.PI)) * Mathf.Exp(-(Mathf.Pow(strength - centro, 2) / (2 * Mathf.Pow(largura, 2)))); //função gaussiana que "filtra" a strength com que vai contra as caixas
 
         return gaussianStrength;
     }
 
-    public virtual float GetLogaritmicOutput(float logBase, float minX, float maxX, float minY, float maxY)
+    public virtual float GetLogaritmicOutput(float logBase, float minX, float maxX, float minY, float maxY) //envia a base do logaritmo e os limites
     {
         //falta por os limites
 
-        float logaritmicStrength = - Mathf.Log(strength, logBase);
+        float logaritmicStrength = - Mathf.Log(strength, logBase); //função logaritmica que "filtra" a strength com que vai contra as caixas
 
         return logaritmicStrength;
     }
