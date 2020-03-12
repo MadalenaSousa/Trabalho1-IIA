@@ -95,11 +95,13 @@ public class ResourceDetectorScript : MonoBehaviour
 
     public virtual float GetLogaritmicOutput(float logBase, float minX, float maxX, float minY, float maxY) //envia a base do logaritmo e os limites
     {
-        if (strength <= minX && minX > 0) //se a força é menor que o minimo em X e o minimo em X não é o default (0)
+        print(strength);
+
+        if (strength < minX && minX > 0) //se a força é menor que o minimo em X e o minimo em X não é o default (0)
         {
             return strength = minY; //força fica igual ao minimo em Y, que é 0 quando não definido
         }
-        else if (strength >= maxX && maxX > 0) //se a força é maior que o maximo em X e o maximo em X não é o default (0)
+        else if (strength > maxX && maxX > 0) //se a força é maior que o maximo em X e o maximo em X não é o default (0)
         {
             return strength = minY; //força fica igual ao minimo em Y, que é 0 quando não definido
         }
