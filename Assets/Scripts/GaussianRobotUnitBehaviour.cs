@@ -19,8 +19,6 @@ public class GaussianRobotUnitBehaviour : RobotUnit
         resourceAngle = resourcesDetector.GetAngleToClosestResource();
         resourceValue = weightResource * resourcesDetector.GetGaussianOutput(centro, largura, resource_minX, resource_maxX, resource_minY, resource_maxY);
 
-        print(resourceValue);
-
         // apply to the ball
         applyForce(resourceAngle, resourceValue); // go towards, slow first, then fast, then slow again
 

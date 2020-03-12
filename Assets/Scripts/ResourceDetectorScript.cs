@@ -64,11 +64,9 @@ public class ResourceDetectorScript : MonoBehaviour
     }
 
     public virtual float GetGaussianOutput(float centro, float largura, float minX, float maxX, float minY, float maxY) //envia o centro do gráfico, a largura, que vai fazer variar a altura, do gráfico e os limites
-    {
+    { 
 
-        //float gaussianStrength = (1 / largura * Mathf.Sqrt(2 * Mathf.PI)) * Mathf.Exp(-(Mathf.Pow(strength - centro, 2) / (2 * Mathf.Pow(largura, 2)))); //função gaussiana que "filtra" a strength com que vai contra as caixas
-
-        if (strength <= minX && minX > 0) //se a força é menor que o minimo em X e o minimo em X não é o default (0)
+        if (strength < minX && minX > 0) //se a força é menor que o minimo em X e o minimo em X não é o default (0)
         {
             return strength = minY; //força fica igual ao minimo em Y, que é 0 quando não definido
         }
@@ -78,16 +76,20 @@ public class ResourceDetectorScript : MonoBehaviour
         }
         else
         {
-            float gaussianStrength = Mathf.Pow((float)Math.E, -(Mathf.Pow(strength - centro, 2) / (2 * Mathf.Pow(largura, 2))));
+            float gaussianStrength = Mathf.Pow((float)Math.E, -(Mathf.Pow(strength - centro, 2) / (2 * Mathf.Pow(largura, 2)))); //função gaussiana que "filtra" a strength com que vai contra as caixas
+
+            print(gaussianStrength);
 
             if (gaussianStrength >= maxY)
             {
                 gaussianStrength = maxY;
             }
-            else if (gaussianStrength <= minY)
+            else if (gaussianStrength < minY)
             {
                 gaussianStrength = minY;
             }
+
+            print(gaussianStrength);
 
             return gaussianStrength;
         }
@@ -95,7 +97,6 @@ public class ResourceDetectorScript : MonoBehaviour
 
     public virtual float GetLogaritmicOutput(float logBase, float minX, float maxX, float minY, float maxY) //envia a base do logaritmo e os limites
     {
-        //print(strength);
 
         if (strength < minX && minX > 0) //se a força é menor que o minimo em X e o minimo em X não é o default (0)
         {
@@ -108,8 +109,6 @@ public class ResourceDetectorScript : MonoBehaviour
         else
         {
             float logaritmicStrength = - Mathf.Log(strength, logBase); //função logaritmica que "filtra" a strength com que vai contra as caixas
-
-            print(logaritmicStrength);
 
             if(logaritmicStrength >= maxY)
             {
