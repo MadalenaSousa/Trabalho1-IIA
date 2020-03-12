@@ -51,7 +51,14 @@ public class ResourceDetectorScript : MonoBehaviour
 
     public float GetLinearOutput(float minX, float maxX, float minY, float maxY) //envia os limites
     {
-        //falta por os limites
+        if (strength <= minX && minX > 0) //se a força é menor que o minimo em X e o minimo em X não é o default (0)
+        {
+            strength = minY; //força fica igual ao minimo em Y, que é 0 quando não definido
+        }
+        else if (strength >= maxX && maxX > 0) //se a força é maior que o maximo em X e o maximo em X não é o default (0)
+        {
+            strength = minY; //força fica igual ao minimo em Y, que é 0 quando não definido
+        }
 
         return strength;
     }
@@ -60,7 +67,9 @@ public class ResourceDetectorScript : MonoBehaviour
     {
         //falta por os limites
 
-        float gaussianStrength = (1 / largura * Mathf.Sqrt(2 * Mathf.PI)) * Mathf.Exp(-(Mathf.Pow(strength - centro, 2) / (2 * Mathf.Pow(largura, 2)))); //função gaussiana que "filtra" a strength com que vai contra as caixas
+        //float gaussianStrength = (1 / largura * Mathf.Sqrt(2 * Mathf.PI)) * Mathf.Exp(-(Mathf.Pow(strength - centro, 2) / (2 * Mathf.Pow(largura, 2)))); //função gaussiana que "filtra" a strength com que vai contra as caixas
+        
+        float gaussianStrength = Mathf.Pow((float)Math.E, -(Mathf.Pow(strength - centro, 2) / (2 * Mathf.Pow(largura, 2))));
 
         return gaussianStrength;
     }
