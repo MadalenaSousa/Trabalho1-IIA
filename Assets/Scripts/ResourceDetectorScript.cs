@@ -95,7 +95,7 @@ public class ResourceDetectorScript : MonoBehaviour
 
     public virtual float GetLogaritmicOutput(float logBase, float minX, float maxX, float minY, float maxY) //envia a base do logaritmo e os limites
     {
-        print(strength);
+        //print(strength);
 
         if (strength < minX && minX > 0) //se a força é menor que o minimo em X e o minimo em X não é o default (0)
         {
@@ -107,7 +107,9 @@ public class ResourceDetectorScript : MonoBehaviour
         }
         else
         {
-            float logaritmicStrength = -Mathf.Log(strength, logBase); //função logaritmica que "filtra" a strength com que vai contra as caixas
+            float logaritmicStrength = - Mathf.Log(strength, logBase); //função logaritmica que "filtra" a strength com que vai contra as caixas
+
+            print(logaritmicStrength);
 
             if(logaritmicStrength >= maxY)
             {
