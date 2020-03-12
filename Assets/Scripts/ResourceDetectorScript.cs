@@ -51,6 +51,8 @@ public class ResourceDetectorScript : MonoBehaviour
 
     public float GetLinearOutput(float minX, float maxX, float minY, float maxY) //envia os limites
     {
+        //FALTA limites no Y, testar negativos e se ser < ou <= é diferente e qual o mais correto 
+
         if (strength <= minX && minX > 0) //se a força é menor que o minimo em X e o minimo em X não é o default (0)
         {
             strength = minY; //força fica igual ao minimo em Y, que é 0 quando não definido
@@ -64,21 +66,28 @@ public class ResourceDetectorScript : MonoBehaviour
     }
 
     public virtual float GetGaussianOutput(float centro, float largura, float minX, float maxX, float minY, float maxY) //envia o centro do gráfico, a largura, que vai fazer variar a altura, do gráfico e os limites
-    { 
+    {
+        //FALTA testar negativos e se ser < ou <= é diferente e qual o mais correto
+
+        print(strength);
 
         if (strength < minX && minX > 0) //se a força é menor que o minimo em X e o minimo em X não é o default (0)
         {
-            return strength = minY; //força fica igual ao minimo em Y, que é 0 quando não definido
+            print(strength);
+
+            return minY; //força fica igual ao minimo em Y, que é 0 quando não definido
         }
         else if (strength >= maxX && maxX > 0) //se a força é maior que o maximo em X e o maximo em X não é o default (0)
         {
-            return strength = minY; //força fica igual ao minimo em Y, que é 0 quando não definido
+            //print(strength);
+
+            return minY; //força fica igual ao minimo em Y, que é 0 quando não definido
         }
         else
         {
-            float gaussianStrength = Mathf.Pow((float)Math.E, -(Mathf.Pow(strength - centro, 2) / (2 * Mathf.Pow(largura, 2)))); //função gaussiana que "filtra" a strength com que vai contra as caixas
+            //FALTA testar negativos e se ser < ou <= é diferente e qual o mais correto
 
-            print(gaussianStrength);
+            float gaussianStrength = Mathf.Pow((float)Math.E, -(Mathf.Pow(strength - centro, 2) / (2 * Mathf.Pow(largura, 2)))); //função gaussiana que "filtra" a strength com que vai contra as caixas
 
             if (gaussianStrength >= maxY)
             {
@@ -88,8 +97,6 @@ public class ResourceDetectorScript : MonoBehaviour
             {
                 gaussianStrength = minY;
             }
-
-            print(gaussianStrength);
 
             return gaussianStrength;
         }
