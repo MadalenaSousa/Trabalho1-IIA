@@ -58,6 +58,14 @@ public class BlockDetectorScript : MonoBehaviour
         {
             return minY; //força fica igual ao minimo em Y, que é 0 quando não definido
         }
+        else if (strength <= minY)
+        {
+            return minY;
+        }
+        else if (strength >= maxY)
+        {
+            return maxY;
+        }
         else
         {
             return strength;

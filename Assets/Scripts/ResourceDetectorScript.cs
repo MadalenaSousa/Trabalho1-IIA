@@ -51,7 +51,7 @@ public class ResourceDetectorScript : MonoBehaviour
 
     public float GetLinearOutput(float minX, float maxX, float minY, float maxY) //envia os limites
     {
-        //FALTA limites no Y, testar negativos e se ser < ou <= é diferente e qual o mais correto 
+        //FALTA testar limites Y, testar negativos e se ser < ou <= é diferente e qual o mais correto 
 
         if (strength <= minX) //se a força é menor que o minimo em X
         {
@@ -60,10 +60,20 @@ public class ResourceDetectorScript : MonoBehaviour
         else if (strength >= maxX) //se a força é maior que o maximo em X
         {
             return minY; //força fica igual ao minimo em Y, que é 0 quando não definido
-        } else
+        } 
+        else if(strength <= minY)
+        {
+            return minY;
+        } 
+        else if(strength >= maxY)
+        {
+            return maxY;
+        } 
+        else
         {
             return strength;
         }
+      
     }
 
     public virtual float GetGaussianOutput(float centro, float largura, float minX, float maxX, float minY, float maxY) //envia o centro do gráfico, a largura, que vai fazer variar a altura, do gráfico e os limites
