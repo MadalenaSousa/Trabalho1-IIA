@@ -53,41 +53,33 @@ public class ResourceDetectorScript : MonoBehaviour
     {
         //FALTA limites no Y, testar negativos e se ser < ou <= é diferente e qual o mais correto 
 
-        if (strength <= minX && minX > 0) //se a força é menor que o minimo em X e o minimo em X não é o default (0)
+        if (strength <= minX) //se a força é menor que o minimo em X
         {
-            strength = minY; //força fica igual ao minimo em Y, que é 0 quando não definido
+            return minY; //força fica igual ao minimo em Y, que é 0 quando não definido
         }
-        else if (strength >= maxX && maxX > 0) //se a força é maior que o maximo em X e o maximo em X não é o default (0)
+        else if (strength >= maxX) //se a força é maior que o maximo em X
         {
-            strength = minY; //força fica igual ao minimo em Y, que é 0 quando não definido
+            return minY; //força fica igual ao minimo em Y, que é 0 quando não definido
+        } else
+        {
+            return strength;
         }
-
-        return strength;
     }
 
     public virtual float GetGaussianOutput(float centro, float largura, float minX, float maxX, float minY, float maxY) //envia o centro do gráfico, a largura, que vai fazer variar a altura, do gráfico e os limites
     {
         //FALTA testar negativos e se ser < ou <= é diferente e qual o mais correto
 
-        print(strength);
-
-        if (strength < minX && minX > 0) //se a força é menor que o minimo em X e o minimo em X não é o default (0)
+        if (strength < minX) //se a força é menor que o minimo em X
         {
-            strength = minY;
-            
-            //print(strength);
-
-            return strength; //força fica igual ao minimo em Y, que é 0 quando não definido
+            return minY; //força fica igual ao minimo em Y, que é 0 quando não definido
         }
-        else if (strength >= maxX && maxX > 0) //se a força é maior que o maximo em X e o maximo em X não é o default (0)
+        else if (strength >= maxX) //se a força é maior que o maximo em X
         {
-            //print(strength);
-
             return minY; //força fica igual ao minimo em Y, que é 0 quando não definido
         }
         else
         {
-            //FALTA testar negativos e se ser < ou <= é diferente e qual o mais correto
 
             float gaussianStrength = Mathf.Pow((float)Math.E, -(Mathf.Pow(strength - centro, 2) / (2 * Mathf.Pow(largura, 2)))); //função gaussiana que "filtra" a strength com que vai contra as caixas
 
@@ -106,14 +98,15 @@ public class ResourceDetectorScript : MonoBehaviour
 
     public virtual float GetLogaritmicOutput(float logBase, float minX, float maxX, float minY, float maxY) //envia a base do logaritmo e os limites
     {
+        //FALTA testar negativos e se ser < ou <= é diferente e qual o mais correto
 
-        if (strength < minX && minX > 0) //se a força é menor que o minimo em X e o minimo em X não é o default (0)
+        if (strength < minX) //se a força é menor que o minimo em X e o minimo em X não é o default (0)
         {
-            return strength = minY; //força fica igual ao minimo em Y, que é 0 quando não definido
+            return minY; //força fica igual ao minimo em Y, que é 0 quando não definido
         }
-        else if (strength > maxX && maxX > 0) //se a força é maior que o maximo em X e o maximo em X não é o default (0)
+        else if (strength > maxX) //se a força é maior que o maximo em X e o maximo em X não é o default (0)
         {
-            return strength = minY; //força fica igual ao minimo em Y, que é 0 quando não definido
+            return minY; //força fica igual ao minimo em Y, que é 0 quando não definido
         }
         else
         {
