@@ -812,7 +812,7 @@ MonoBehaviour:
   resourceAngle: 0
   largura: 0.195
   centro: 0.5
-  resource_minX: 0.1
+  resource_minX: 0.08
   resource_maxX: 20
   resource_minY: 0.1
   resource_maxY: 20

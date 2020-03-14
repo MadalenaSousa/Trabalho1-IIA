@@ -73,9 +73,11 @@ public class ResourceDetectorScript : MonoBehaviour
 
         if (strength < minX && minX > 0) //se a força é menor que o minimo em X e o minimo em X não é o default (0)
         {
-            print(strength);
+            strength = minY;
+            
+            //print(strength);
 
-            return minY; //força fica igual ao minimo em Y, que é 0 quando não definido
+            return strength; //força fica igual ao minimo em Y, que é 0 quando não definido
         }
         else if (strength >= maxX && maxX > 0) //se a força é maior que o maximo em X e o maximo em X não é o default (0)
         {
