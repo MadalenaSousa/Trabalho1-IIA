@@ -110,11 +110,11 @@ public class ResourceDetectorScript : MonoBehaviour
     {
         //FALTA testar negativos e se ser < ou <= é diferente e qual o mais correto
 
-        if (strength < minX) //se a força é menor que o minimo em X e o minimo em X não é o default (0)
+        if (strength <= minX) //se a força é menor que o minimo em X e o minimo em X não é o default (0)
         {
             return minY; //força fica igual ao minimo em Y, que é 0 quando não definido
         }
-        else if (strength > maxX) //se a força é maior que o maximo em X e o maximo em X não é o default (0)
+        else if (strength >= maxX) //se a força é maior que o maximo em X e o maximo em X não é o default (0)
         {
             return minY; //força fica igual ao minimo em Y, que é 0 quando não definido
         }
@@ -130,6 +130,8 @@ public class ResourceDetectorScript : MonoBehaviour
             {
                 logaritmicStrength = minY;
             }
+
+            print(logaritmicStrength);
 
             return logaritmicStrength;
         }

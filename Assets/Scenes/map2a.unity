@@ -798,12 +798,12 @@ MonoBehaviour:
   resourcesDetector: {fileID: 1080066065}
   blockDetector: {fileID: 1080066064}
   debugMode: 1
-  weightResource: 0.5
+  weightResource: 0.1
   resourceValue: 0
   resourceAngle: 0
   logBase: 10
-  resource_minX: 0.1
-  resource_maxX: 20
+  resource_minX: 0
+  resource_maxX: 0.6
   resource_minY: 0
   resource_maxY: 20
   block_minX: 0
