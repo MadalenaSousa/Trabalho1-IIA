@@ -106,6 +106,7 @@ public class ResourceDetectorScript : MonoBehaviour
 
     public virtual float GetLogaritmicOutput(float logBase, float minX, float maxX, float minY, float maxY) //envia a base do logaritmo e os limites
     {
+        print(strength);
 
         if (strength <= minX) //se a força é menor que o minimo em X
         {
@@ -127,8 +128,6 @@ public class ResourceDetectorScript : MonoBehaviour
             {
                 logaritmicStrength = minY;
             }
-
-            print(logaritmicStrength);
 
             return logaritmicStrength;
         }
