@@ -51,27 +51,87 @@ public class ResourceDetectorScript : MonoBehaviour
 
     public float GetLinearOutput(float minX, float maxX, float minY, float maxY) //envia os limites
     {
-        //falta por os limites
 
-        return strength;
+        if (strength <= minX) //se a força é menor que o minimo em X
+        {
+            return minY; //força fica igual ao minimo em Y
+        }
+        else if (strength >= maxX) //se a força é maior que o maximo em X
+        {
+            return minY; //força fica igual ao minimo em Y
+        } 
+        else if(strength <= minY)
+        {
+            return minY;
+        } 
+        else if(strength >= maxY)
+        {
+            return maxY;
+        } 
+        else
+        {
+            return strength;
+        }
+      
     }
 
     public virtual float GetGaussianOutput(float centro, float largura, float minX, float maxX, float minY, float maxY) //envia o centro do gráfico, a largura, que vai fazer variar a altura, do gráfico e os limites
     {
-        //falta por os limites
 
-        float gaussianStrength = (1 / largura * Mathf.Sqrt(2 * Mathf.PI)) * Mathf.Exp(-(Mathf.Pow(strength - centro, 2) / (2 * Mathf.Pow(largura, 2)))); //função gaussiana que "filtra" a strength com que vai contra as caixas
+        if (strength < minX) //se a força é menor que o minimo em X
+        {
+            return minY; //força fica igual ao minimo em Y
+        }
+        else if (strength >= maxX) //se a força é maior que o maximo em X
+        {
+            return minY; //força fica igual ao minimo em Y
+        }
+        else
+        {
 
-        return gaussianStrength;
+            float gaussianStrength = Mathf.Pow((float)Math.E, -(Mathf.Pow(strength - centro, 2) / (2 * Mathf.Pow(largura, 2)))); //função gaussiana que "filtra" a strength com que vai contra as caixas
+
+            if (gaussianStrength >= maxY)
+            {
+                gaussianStrength = maxY;
+            }
+            else if (gaussianStrength < minY)
+            {
+                gaussianStrength = minY;
+            }
+
+            return gaussianStrength;
+        }
     }
 
     public virtual float GetLogaritmicOutput(float logBase, float minX, float maxX, float minY, float maxY) //envia a base do logaritmo e os limites
     {
-        //falta por os limites
 
-        float logaritmicStrength = - Mathf.Log(strength, logBase); //função logaritmica que "filtra" a strength com que vai contra as caixas
+        if (strength <= minX) //se a força é menor que o minimo em X
+        {
+            return minY; //força fica igual ao minimo em Y
+        }
+        else if (strength >= maxX) //se a força é maior que o maximo em X
+        {
+            return minY; //força fica igual ao minimo em Y
+        }
+        else
+        {
+            float logaritmicStrength = - Mathf.Log(strength, logBase); //função logaritmica que "filtra" a strength com que vai contra as caixas
 
-        return logaritmicStrength;
+            if(logaritmicStrength >= maxY)
+            {
+                logaritmicStrength = maxY;
+            } 
+            else if(logaritmicStrength <= minY)
+            {
+                logaritmicStrength = minY;
+            }
+
+            print(logaritmicStrength);
+
+            return logaritmicStrength;
+        }
     }
 
 
