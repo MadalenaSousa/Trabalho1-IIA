@@ -798,17 +798,17 @@ MonoBehaviour:
   resourcesDetector: {fileID: 1080066065}
   blockDetector: {fileID: 1080066064}
   debugMode: 1
-  weightResource: 0.2
+  weightResource: 1
   resourceValue: 0
   resourceAngle: 0
   logBase: 10
   resource_minX: 0
-  resource_maxX: 20
-  resource_minY: 0
-  resource_maxY: 0.2
+  resource_maxX: 1
+  resource_minY: 1
+  resource_maxY: 0
   block_minX: 0
-  block_maxX: 0
-  block_minY: 0
+  block_maxX: 1
+  block_minY: 1
   block_maxY: 0
 --- !u!1 &1120493373
 GameObject:

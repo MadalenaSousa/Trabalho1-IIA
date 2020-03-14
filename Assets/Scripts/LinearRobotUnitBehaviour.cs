@@ -22,8 +22,6 @@ public class LinearRobotUnitBehaviour : RobotUnit
         blockAngle = blockDetector.GetAngleToClosestObstacle();
         blockValue = weightBlock * blockDetector.GetLinearOutput(block_minX, block_maxX, block_minY, block_maxY);
 
-        print(resourceValue);
-
         // apply to the ball
         applyForce(resourceAngle, resourceValue); // go towards
         applyForce(blockAngle, blockValue); // afasta-se

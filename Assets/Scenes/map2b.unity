@@ -812,12 +812,12 @@ MonoBehaviour:
   resourceAngle: 0
   largura: 0.195
   centro: 0.5
-  resource_minX: 0.08
-  resource_maxX: 20
-  resource_minY: 0.1
-  resource_maxY: 20
+  resource_minX: 0
+  resource_maxX: 1
+  resource_minY: 0
+  resource_maxY: 0
   block_minX: 0
-  block_maxX: 0
+  block_maxX: 1
   block_minY: 0
   block_maxY: 0
 --- !u!1 &705507993

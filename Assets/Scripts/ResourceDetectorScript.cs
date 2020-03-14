@@ -51,15 +51,14 @@ public class ResourceDetectorScript : MonoBehaviour
 
     public float GetLinearOutput(float minX, float maxX, float minY, float maxY) //envia os limites
     {
-        //FALTA testar limites Y, testar negativos e se ser < ou <= é diferente e qual o mais correto 
 
         if (strength <= minX) //se a força é menor que o minimo em X
         {
-            return minY; //força fica igual ao minimo em Y, que é 0 quando não definido
+            return minY; //força fica igual ao minimo em Y
         }
         else if (strength >= maxX) //se a força é maior que o maximo em X
         {
-            return minY; //força fica igual ao minimo em Y, que é 0 quando não definido
+            return minY; //força fica igual ao minimo em Y
         } 
         else if(strength <= minY)
         {
@@ -78,15 +77,14 @@ public class ResourceDetectorScript : MonoBehaviour
 
     public virtual float GetGaussianOutput(float centro, float largura, float minX, float maxX, float minY, float maxY) //envia o centro do gráfico, a largura, que vai fazer variar a altura, do gráfico e os limites
     {
-        //FALTA testar negativos e se ser < ou <= é diferente e qual o mais correto
 
         if (strength < minX) //se a força é menor que o minimo em X
         {
-            return minY; //força fica igual ao minimo em Y, que é 0 quando não definido
+            return minY; //força fica igual ao minimo em Y
         }
         else if (strength >= maxX) //se a força é maior que o maximo em X
         {
-            return minY; //força fica igual ao minimo em Y, que é 0 quando não definido
+            return minY; //força fica igual ao minimo em Y
         }
         else
         {
@@ -108,15 +106,14 @@ public class ResourceDetectorScript : MonoBehaviour
 
     public virtual float GetLogaritmicOutput(float logBase, float minX, float maxX, float minY, float maxY) //envia a base do logaritmo e os limites
     {
-        //FALTA testar negativos e se ser < ou <= é diferente e qual o mais correto
 
-        if (strength <= minX) //se a força é menor que o minimo em X e o minimo em X não é o default (0)
+        if (strength <= minX) //se a força é menor que o minimo em X
         {
-            return minY; //força fica igual ao minimo em Y, que é 0 quando não definido
+            return minY; //força fica igual ao minimo em Y
         }
-        else if (strength >= maxX) //se a força é maior que o maximo em X e o maximo em X não é o default (0)
+        else if (strength >= maxX) //se a força é maior que o maximo em X
         {
-            return minY; //força fica igual ao minimo em Y, que é 0 quando não definido
+            return minY; //força fica igual ao minimo em Y
         }
         else
         {
