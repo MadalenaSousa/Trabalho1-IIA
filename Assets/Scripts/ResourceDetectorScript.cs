@@ -6,7 +6,7 @@ using UnityEngine;
 public class ResourceDetectorScript : MonoBehaviour
 {
 
-    public float angleOfSensors = 10f;
+    public float angleOfSensors = 10;
     public float rangeOfSensors = 0.1f;
     protected Vector3 initialTransformUp;
     protected Vector3 initialTransformFwd;
@@ -106,8 +106,6 @@ public class ResourceDetectorScript : MonoBehaviour
 
     public virtual float GetLogaritmicOutput(float logBase, float minX, float maxX, float minY, float maxY) //envia a base do logaritmo e os limites
     {
-        print(strength);
-
         if (strength <= minX) //se a força é menor que o minimo em X
         {
             return minY; //força fica igual ao minimo em Y
