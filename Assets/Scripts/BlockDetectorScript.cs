@@ -48,7 +48,7 @@ public class BlockDetectorScript : MonoBehaviour
 
     public float GetLinearOutput(float minX, float maxX, float minY, float maxY) //envia os limites
     {
-        //FALTA limites no Y, testar negativos e se ser < ou <= é diferente e qual o mais correto 
+        //FALTA testar limites no Y, testar negativos e se ser < ou <= é diferente e qual o mais correto 
 
         if (strength <= minX) //se a força é menor que o minimo em X
         {
