@@ -810,7 +810,7 @@ MonoBehaviour:
   weightResource: 1
   resourceValue: 0
   resourceAngle: 0
-  largura: 0.195
+  largura: 0.12
   centro: 0.5
   resource_minX: 0
   resource_maxX: 1
