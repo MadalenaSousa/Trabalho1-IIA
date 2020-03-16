@@ -788,7 +788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec3a16dc6bfeb4c468864d89ef9d7563, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1080066066
+--- !u!114 &1080066067
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -797,7 +797,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1080066063}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 782724997f8338946babc05573a28c70, type: 3}
+  m_Script: {fileID: 11500000, guid: fd4ffb4743517c744a2919094d3e0623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   resourcesGathered: 0
@@ -807,13 +807,16 @@ MonoBehaviour:
   timeElapsed: 0
   resourcesDetector: {fileID: 1080066065}
   blockDetector: {fileID: 1080066064}
-  debugMode: 0
+  debugMode: 1
   weightResource: 0.1
-  weightBlock: 0
   resourceValue: 0
   resourceAngle: 0
+  weightBlock: 0
   blockValue: 0
   blockAngle: 0
+  largura: 0
+  centro: 0
+  altura: 0
   logBase: 10
   resource_minX: 0
   resource_maxX: 1
@@ -821,8 +824,10 @@ MonoBehaviour:
   resource_maxY: Infinity
   block_minX: 0
   block_maxX: 1
-  block_minY: 1
-  block_maxY: 0
+  block_minY: 0
+  block_maxY: Infinity
+  resourceActivationType: logaritmic
+  blockActivationType: 
 --- !u!1 &1120493373
 GameObject:
   m_ObjectHideFlags: 0
