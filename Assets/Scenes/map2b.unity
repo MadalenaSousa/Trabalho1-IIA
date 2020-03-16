@@ -794,9 +794,9 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 567236602}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c75b54f3259c41845a84beb98c572b82, type: 3}
+  m_Script: {fileID: 11500000, guid: fd4ffb4743517c744a2919094d3e0623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   resourcesGathered: 0
@@ -807,58 +807,26 @@ MonoBehaviour:
   resourcesDetector: {fileID: 1562595805}
   blockDetector: {fileID: 1562595804}
   debugMode: 1
-  weightResource: 0.5
+  weightResource: 1
   resourceValue: 0
   resourceAngle: 0
   weightBlock: -1
   blockValue: 0
   blockAngle: 0
-  largura: 0.5
+  largura: 0.12
   centro: 0.5
   altura: 1
+  logBase: 10
   resource_minX: 0
-  resource_maxX: 0.5
+  resource_maxX: 1
   resource_minY: 0
   resource_maxY: 1
   block_minX: 0
   block_maxX: 1
   block_minY: 0
   block_maxY: 1
---- !u!114 &567236604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 567236602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 782724997f8338946babc05573a28c70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  resourcesGathered: 0
-  speed: 1
-  countText: {fileID: 973308075}
-  startTime: 0
-  timeElapsed: 0
-  resourcesDetector: {fileID: 1562595805}
-  blockDetector: {fileID: 1562595804}
-  debugMode: 1
-  weightResource: 0.5
-  weightBlock: 0
-  resourceValue: 0
-  resourceAngle: 0
-  blockValue: 0
-  blockAngle: 0
-  logBase: 2.72
-  resource_minX: 0.01
-  resource_maxX: 1
-  resource_minY: 0
-  resource_maxY: 0.5
-  block_minX: 0
-  block_maxX: 1
-  block_minY: 0
-  block_maxY: Infinity
+  resourceActivationType: gaussian
+  blockActivationType: linear
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2274,7 +2242,7 @@ PrefabInstance:
     - target: {fileID: 1022615238940490695, guid: b606527f8af28664a894844f3f526637,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1022615238940490695, guid: b606527f8af28664a894844f3f526637,
         type: 3}
@@ -2401,7 +2369,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1022615238940490695, guid: b606527f8af28664a894844f3f526637, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b606527f8af28664a894844f3f526637, type: 3}
 --- !u!114 &1562595804 stripped
 MonoBehaviour:
