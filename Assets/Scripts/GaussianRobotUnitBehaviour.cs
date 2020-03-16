@@ -27,6 +27,6 @@ public class GaussianRobotUnitBehaviour : RobotUnit
 
         // apply to the ball
         applyForce(resourceAngle, resourceValue); // go towards, slow first, then fast, then slow again
-
+        applyForce(blockAngle, blockValue); // go towards, slow first, then fast, then slow again
     }
 }
