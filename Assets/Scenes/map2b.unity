@@ -794,7 +794,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 567236602}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c75b54f3259c41845a84beb98c572b82, type: 3}
   m_Name: 
@@ -807,7 +807,7 @@ MonoBehaviour:
   resourcesDetector: {fileID: 1562595805}
   blockDetector: {fileID: 1562595804}
   debugMode: 1
-  weightResource: 1
+  weightResource: 0.5
   resourceValue: 0
   resourceAngle: 0
   weightBlock: -1
@@ -824,6 +824,41 @@ MonoBehaviour:
   block_maxX: 1
   block_minY: 0
   block_maxY: 1
+--- !u!114 &567236604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567236602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 782724997f8338946babc05573a28c70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourcesGathered: 0
+  speed: 1
+  countText: {fileID: 973308075}
+  startTime: 0
+  timeElapsed: 0
+  resourcesDetector: {fileID: 1562595805}
+  blockDetector: {fileID: 1562595804}
+  debugMode: 1
+  weightResource: 0.5
+  weightBlock: 0
+  resourceValue: 0
+  resourceAngle: 0
+  blockValue: 0
+  blockAngle: 0
+  logBase: 2.72
+  resource_minX: 0.01
+  resource_maxX: 1
+  resource_minY: 0
+  resource_maxY: 0.5
+  block_minX: 0
+  block_maxX: 1
+  block_minY: 0
+  block_maxY: Infinity
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2239,7 +2274,7 @@ PrefabInstance:
     - target: {fileID: 1022615238940490695, guid: b606527f8af28664a894844f3f526637,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1022615238940490695, guid: b606527f8af28664a894844f3f526637,
         type: 3}
@@ -2274,7 +2309,7 @@ PrefabInstance:
     - target: {fileID: 1022615238940490695, guid: b606527f8af28664a894844f3f526637,
         type: 3}
       propertyPath: weightBlock
-      value: -0.2
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 2708693024619415137, guid: b606527f8af28664a894844f3f526637,
         type: 3}
@@ -2344,17 +2379,17 @@ PrefabInstance:
     - target: {fileID: 5325365325777440094, guid: b606527f8af28664a894844f3f526637,
         type: 3}
       propertyPath: rangeOfSensors
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7314612682239532039, guid: b606527f8af28664a894844f3f526637,
-        type: 3}
-      propertyPath: angleOfSensors
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7314612682239532039, guid: b606527f8af28664a894844f3f526637,
         type: 3}
+      propertyPath: angleOfSensors
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7314612682239532039, guid: b606527f8af28664a894844f3f526637,
+        type: 3}
       propertyPath: rangeOfSensors
-      value: 200
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 8831919988329666845, guid: b606527f8af28664a894844f3f526637,
         type: 3}
