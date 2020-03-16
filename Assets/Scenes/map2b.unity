@@ -815,6 +815,7 @@ MonoBehaviour:
   blockAngle: 0
   largura: 0.5
   centro: 0.5
+  altura: 1
   resource_minX: 0
   resource_maxX: 0.5
   resource_minY: 0

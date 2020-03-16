@@ -71,7 +71,7 @@ public class BlockDetectorScript : MonoBehaviour
         }
     }
 
-    public virtual float GetGaussianOutput(float largura, float centro, float minX, float maxX, float minY, float maxY) //envia o centro do gráfico, a largura, que vai fazer variar a altura, do gráfico e os limites
+    public virtual float GetGaussianOutput(float altura, float largura, float centro, float minX, float maxX, float minY, float maxY) //envia o centro do gráfico, a largura, que vai fazer variar a altura, do gráfico e os limites
     {
 
         if (strength < minX) //se a força é menor que o minimo em X
@@ -85,7 +85,7 @@ public class BlockDetectorScript : MonoBehaviour
         else
         {
 
-            float gaussianStrength = Mathf.Pow((float)Math.E, -(Mathf.Pow(strength - centro, 2) / (2 * Mathf.Pow(largura, 2)))); //função gaussiana que "filtra" a strength com que vai contra as caixas
+            float gaussianStrength = altura * Mathf.Pow((float)Math.E, -(Mathf.Pow(strength - centro, 2) / (2 * Mathf.Pow(largura, 2)))); //função gaussiana que "filtra" a strength com que vai contra as caixas
 
             if (gaussianStrength >= maxY)
             {
