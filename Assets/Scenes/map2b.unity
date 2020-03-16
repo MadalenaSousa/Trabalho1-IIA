@@ -810,16 +810,19 @@ MonoBehaviour:
   weightResource: 1
   resourceValue: 0
   resourceAngle: 0
+  weightBlock: -5
+  blockValue: 0
+  blockAngle: 0
   largura: 0.12
   centro: 0.5
   resource_minX: 0
-  resource_maxX: 1
+  resource_maxX: 0.5
   resource_minY: 0
-  resource_maxY: 0
+  resource_maxY: 1
   block_minX: 0
   block_maxX: 1
   block_minY: 0
-  block_maxY: 0
+  block_maxY: 1
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2237,6 +2240,46 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1022615238940490695, guid: b606527f8af28664a894844f3f526637,
+        type: 3}
+      propertyPath: resourcesDetector
+      value: 
+      objectReference: {fileID: 1562595805}
+    - target: {fileID: 1022615238940490695, guid: b606527f8af28664a894844f3f526637,
+        type: 3}
+      propertyPath: block_maxY
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1022615238940490695, guid: b606527f8af28664a894844f3f526637,
+        type: 3}
+      propertyPath: block_maxX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1022615238940490695, guid: b606527f8af28664a894844f3f526637,
+        type: 3}
+      propertyPath: resource_maxY
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1022615238940490695, guid: b606527f8af28664a894844f3f526637,
+        type: 3}
+      propertyPath: resource_maxX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1022615238940490695, guid: b606527f8af28664a894844f3f526637,
+        type: 3}
+      propertyPath: weightResource
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1022615238940490695, guid: b606527f8af28664a894844f3f526637,
+        type: 3}
+      propertyPath: weightBlock
+      value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708693024619415137, guid: b606527f8af28664a894844f3f526637,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4098859518129120615, guid: b606527f8af28664a894844f3f526637,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2291,6 +2334,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5325365325777440094, guid: b606527f8af28664a894844f3f526637,
+        type: 3}
+      propertyPath: debugMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7314612682239532039, guid: b606527f8af28664a894844f3f526637,
         type: 3}
