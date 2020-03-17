@@ -1982,17 +1982,17 @@ MonoBehaviour:
   resourcesDetector: {fileID: 514644424}
   blockDetector: {fileID: 514644422}
   debugMode: 1
-  weightResource: 2
+  weightResource: 1
   resourceValue: 0
   resourceAngle: 0
-  weightBlock: -2
+  weightBlock: -0.5
   blockValue: 0
   blockAngle: 0
-  largura: 0.05
-  centro: 0.15
-  altura: 1.5
+  largura: 2
+  centro: 0.4
+  altura: 2
   logBase: 0
-  declive: 4
+  declive: 1
   outputO: 0
   resource_minX: 0
   resource_maxX: 1
