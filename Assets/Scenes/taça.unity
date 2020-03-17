@@ -1096,7 +1096,7 @@ PrefabInstance:
     - target: {fileID: 8579131249557736061, guid: a178fece808d444b1b26355fde5accad,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.1
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a178fece808d444b1b26355fde5accad, type: 3}
@@ -1902,7 +1902,7 @@ MonoBehaviour:
   weightResource: 1
   resourceValue: 0
   resourceAngle: 0
-  weightBlock: -2
+  weightBlock: -1
   blockValue: 0
   blockAngle: 0
   largura: 0.12
@@ -1920,7 +1920,7 @@ MonoBehaviour:
   block_minY: 0
   block_maxY: 1
   resourceActivationType: linear
-  blockActivationType: gauss
+  blockActivationType: gaussian
 --- !u!4 &534907058 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5229371599239556071, guid: e0274b6cb11494a6ea7c4470df4f5638,
