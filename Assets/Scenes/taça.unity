@@ -1937,7 +1937,7 @@ MonoBehaviour:
   weightResource: 1
   resourceValue: 0
   resourceAngle: 0
-  weightBlock: -1
+  weightBlock: -1.2
   blockValue: 0
   blockAngle: 0
   largura: 0.12
