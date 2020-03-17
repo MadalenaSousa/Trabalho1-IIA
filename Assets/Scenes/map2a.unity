@@ -748,7 +748,7 @@ PrefabInstance:
     - target: {fileID: 7314612682239532039, guid: b606527f8af28664a894844f3f526637,
         type: 3}
       propertyPath: rangeOfSensors
-      value: 30
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8831919988329666845, guid: b606527f8af28664a894844f3f526637,
         type: 3}
@@ -808,27 +808,27 @@ MonoBehaviour:
   resourcesDetector: {fileID: 1080066065}
   blockDetector: {fileID: 1080066064}
   debugMode: 1
-  weightResource: 0.2
+  weightResource: 0.25
   resourceValue: 0
   resourceAngle: 0
   weightBlock: 0
   blockValue: 0
   blockAngle: 0
-  largura: 0.1
-  centro: 0.1
-  altura: 1
+  largura: 0
+  centro: 0
+  altura: 0
   logBase: 10
   declive: 1
   outputO: 0
-  resource_minX: 0.1
-  resource_maxX: 0.25
+  resource_minX: 0
+  resource_maxX: 0.2
   resource_minY: 0
-  resource_maxY: 1
+  resource_maxY: Infinity
   block_minX: 0
-  block_maxX: 1
+  block_maxX: 0
   block_minY: 0
-  block_maxY: Infinity
-  resourceActivationType: gaussian
+  block_maxY: 0
+  resourceActivationType: logaritmic
   blockActivationType: 
 --- !u!1 &1120493373
 GameObject:
