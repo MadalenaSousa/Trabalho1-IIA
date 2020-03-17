@@ -10,7 +10,7 @@ public class RobotUnitBehaviourScript : RobotUnit
     public float weightBlock;
     public float blockValue;
     public float blockAngle;
-    public float largura, centro, altura, logBase;
+    public float largura, centro, altura, logBase, declive, outputO;
     public float resource_minX, resource_maxX, resource_minY, resource_maxY;
     public float block_minX, block_maxX, block_minY, block_maxY;
     public string resourceActivationType, blockActivationType;
@@ -22,7 +22,7 @@ public class RobotUnitBehaviourScript : RobotUnit
         if(resourceActivationType == "linear")
         {
             resourceAngle = resourcesDetector.GetAngleToClosestResource();
-            resourceValue = weightResource * resourcesDetector.GetLinearOutput(resource_minX, resource_maxX, resource_minY, resource_maxY);
+            resourceValue = weightResource * resourcesDetector.GetLinearOutput(declive, outputO, resource_minX, resource_maxX, resource_minY, resource_maxY);
         } 
         else if(resourceActivationType == "logaritmic")
         {
