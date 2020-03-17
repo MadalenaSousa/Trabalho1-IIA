@@ -807,23 +807,25 @@ MonoBehaviour:
   resourcesDetector: {fileID: 1562595805}
   blockDetector: {fileID: 1562595804}
   debugMode: 1
-  weightResource: 1
+  weightResource: 3
   resourceValue: 0
   resourceAngle: 0
-  weightBlock: -1
+  weightBlock: -3
   blockValue: 0
   blockAngle: 0
-  largura: 0.12
-  centro: 0.5
-  altura: 1
-  logBase: 10
+  largura: 0.05
+  centro: 0.15
+  altura: 1.5
+  logBase: 0
+  declive: 1
+  outputO: 0
   resource_minX: 0
-  resource_maxX: 1
-  resource_minY: 0
-  resource_maxY: 1
-  block_minX: 0
+  resource_maxX: 0.25
+  resource_minY: 0.5
+  resource_maxY: 1.5
+  block_minX: 0.2
   block_maxX: 1
-  block_minY: 0
+  block_minY: 0.2
   block_maxY: 1
   resourceActivationType: gaussian
   blockActivationType: linear
@@ -2347,17 +2349,22 @@ PrefabInstance:
     - target: {fileID: 5325365325777440094, guid: b606527f8af28664a894844f3f526637,
         type: 3}
       propertyPath: rangeOfSensors
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 7314612682239532039, guid: b606527f8af28664a894844f3f526637,
+    - target: {fileID: 5325365325777440094, guid: b606527f8af28664a894844f3f526637,
         type: 3}
       propertyPath: angleOfSensors
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7314612682239532039, guid: b606527f8af28664a894844f3f526637,
         type: 3}
+      propertyPath: angleOfSensors
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7314612682239532039, guid: b606527f8af28664a894844f3f526637,
+        type: 3}
       propertyPath: rangeOfSensors
-      value: 30
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 8831919988329666845, guid: b606527f8af28664a894844f3f526637,
         type: 3}
