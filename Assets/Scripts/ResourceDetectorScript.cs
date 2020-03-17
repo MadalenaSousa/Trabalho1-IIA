@@ -49,7 +49,7 @@ public class ResourceDetectorScript : MonoBehaviour
 
 
 
-    public float GetLinearOutput(float declive, float outputO, float minX, float maxX, float minY, float maxY) //envia os limites
+    public float GetLinearOutput(float declive, float outputO, float minX, float maxX, float minY, float maxY) //envia os limites, declive e valor na origem
     {
 
         if (strength <= minX) //se a força é menor que o minimo em X
@@ -99,8 +99,6 @@ public class ResourceDetectorScript : MonoBehaviour
             {
                 gaussianStrength = minY;
             }
-
-            print(gaussianStrength);
 
             return gaussianStrength;
         }
