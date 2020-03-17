@@ -503,12 +503,12 @@ PrefabInstance:
     - target: {fileID: 8579131249557736061, guid: a178fece808d444b1b26355fde5accad,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.62
+      value: 1.42
       objectReference: {fileID: 0}
     - target: {fileID: 8579131249557736061, guid: a178fece808d444b1b26355fde5accad,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 20.068668
+      value: 20.5
       objectReference: {fileID: 0}
     - target: {fileID: 8579131249557736061, guid: a178fece808d444b1b26355fde5accad,
         type: 3}
@@ -1934,10 +1934,10 @@ MonoBehaviour:
   resourcesDetector: {fileID: 514644424}
   blockDetector: {fileID: 514644422}
   debugMode: 1
-  weightResource: 1
+  weightResource: 1.2
   resourceValue: 0
   resourceAngle: 0
-  weightBlock: -1.2
+  weightBlock: -1
   blockValue: 0
   blockAngle: 0
   largura: 0.12
@@ -1982,7 +1982,7 @@ GameObject:
   - component: {fileID: 577546831}
   m_Layer: 0
   m_Name: pe
-  m_TagString: Untagged
+  m_TagString: Pickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3229,7 +3229,7 @@ GameObject:
   - component: {fileID: 1373180847}
   m_Layer: 0
   m_Name: fundo
-  m_TagString: Untagged
+  m_TagString: Pickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4452,7 +4452,7 @@ GameObject:
   - component: {fileID: 1620428783}
   m_Layer: 0
   m_Name: "Ta\xE7a"
-  m_TagString: Wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4702,7 +4702,7 @@ GameObject:
   - component: {fileID: 1757227109}
   m_Layer: 0
   m_Name: taca
-  m_TagString: Untagged
+  m_TagString: Pickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5322,7 +5322,7 @@ PrefabInstance:
     - target: {fileID: 5229371599239556071, guid: e0274b6cb11494a6ea7c4470df4f5638,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.87
+      value: 14.47
       objectReference: {fileID: 0}
     - target: {fileID: 5229371599239556071, guid: e0274b6cb11494a6ea7c4470df4f5638,
         type: 3}
@@ -5458,6 +5458,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: taca
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412274543882461278, guid: 0faa9cb52bf84a54a92a1ab0aa9ece61,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pickup
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0faa9cb52bf84a54a92a1ab0aa9ece61, type: 3}
