@@ -2321,6 +2321,11 @@ PrefabInstance:
       propertyPath: weightBlock
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 2212840513878135726, guid: b606527f8af28664a894844f3f526637,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 60331fb91f13f8343ae38b61884743f3, type: 2}
     - target: {fileID: 2708693024619415137, guid: b606527f8af28664a894844f3f526637,
         type: 3}
       propertyPath: m_Enabled
